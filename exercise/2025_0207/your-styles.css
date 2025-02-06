@@ -1,5 +1,3 @@
-
-
 #ex-01 {
   display: flex;
   gap: 20px;
@@ -74,46 +72,34 @@
 
 /* navibar */
 .navbar {
-  background-color: #333; /* Dark gray background */
+  background-color: #333;
   padding: 10px 20px;
-  /* If you want the navbar to remain at the top when scrolling, uncomment:
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 999;
-  */
 }
 
-/* List inside navbar: remove bullets, use flex for horizontal layout */
 .navbar ul {
   list-style-type: none;
   display: flex;
-  justify-content: flex-end; /* or flex-start, center, space-around, etc. */
+  justify-content: flex-end;
 }
 
-/* Each list item */
 .navbar li {
-  margin-left: 20px; /* spacing between links */
+  margin-left: 20px;
 }
 
-/* The links themselves */
 .navbar a {
   color: #fff;
   text-decoration: none;
   padding: 8px 16px;
-  display: inline-block; /* ensures the link can have a ‘block’ hover effect */
+  display: inline-block;
 }
 
-/* Hover state: change background color */
 .navbar a:hover {
-  background-color: #555; /* slightly lighter gray */
+  background-color: #555;
   transition: background-color 0.3s ease;
 }
 
-/* Just some content styling to make a scrollable page */
 .content {
   padding: 20px;
   max-width: 600px;
-  margin: 80px auto; /* push content down and center, if navbar is fixed this prevents overlap */
+  margin: 80px auto;
 }
