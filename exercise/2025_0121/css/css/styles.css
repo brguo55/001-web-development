@@ -1,0 +1,75 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #c5d88a;
+  padding: 10px;
+}
+
+.header-img {
+  width: 10%;
+  display: inline-block;
+  margin-right: 15px;
+  border: 2px solid #000;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Parent container */
+.content {
+  display: flex; /* Use Flexbox */
+  gap: 20px; /* Space between boxes */
+}
+
+.box:first-child {
+  flex: 1; /* Make the first box grow to fill space */
+}
+
+/* Common box styles */
+.box {
+  background-color: #eedfaa;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 10px 0;
+}
+
+footer p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
