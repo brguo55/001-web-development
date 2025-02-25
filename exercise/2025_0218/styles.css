@@ -1,77 +1,60 @@
-/* Reset & Basic Styling */
-* {
+/* Global Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f5f5f5;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
-.container {
+/* Main Grid Container */
+.grid-container {
     display: grid;
+    width: 80%;
+    max-width: 900px;
     gap: 10px;
-    padding: 20px;
-    width: 90%;
-    max-width: 1000px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto;
-}
-
-.item {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
-/* Positioning Using Grid Line Numbers */
-.a { grid-column: 1 / 3; grid-row: 1 / 2; }
-.b { grid-column: 3 / 5; grid-row: 1 / 2; }
-.c { grid-column: 1 / 5; grid-row: 2 / 3; }
-.d { 
-    grid-column: 1 / 5; 
-    grid-row: 3 / 4; 
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
-    gap: 10px;
+}
+
+/* Header Sections */
+.header {
     background-color: #333;
+    height: 80px;
+}
+
+/* Main Content Section */
+.main-content {
+    background-color: #333;
+    grid-column: span 2;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nested Grid */
+.nested-grid {
+    display: grid;
+    width: 90%;
+    height: 90%;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    background-color: #555;
     padding: 10px;
-    border-radius: 5px;
 }
 
-/* Nested Grid Using Line Numbers */
-.nested {
+/* Nested Items */
+.nested-item {
     background-color: #bbb;
-    color: black;
-    padding: 15px;
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 5px;
+    height: 80px;
 }
 
-.e { grid-column: 1 / 3; grid-row: 1 / 2; }
-.f { grid-column: 1 / 2; grid-row: 2 / 3; }
-.g { grid-column: 2 / 3; grid-row: 2 / 3; }
-
-/* Media Query for Larger Screens */
-@media (min-width: 800px) {
-    .container {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto auto;
-    }
-
-    .a { grid-column: 1 / 2; }
-    .b { grid-column: 2 / 3; }
-    .c { grid-column: 1 / 3; }
-    .d { grid-column: 3 / 5; }
+/* Adjust for First Nested Box */
+.nested-item:first-child {
+    grid-column: span 2;
+    height: 120px;
 }
